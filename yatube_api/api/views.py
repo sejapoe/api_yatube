@@ -1,10 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.viewsets import ReadOnlyModelViewSet, ViewSet, ModelViewSet
+from rest_framework.viewsets import ReadOnlyModelViewSet, ModelViewSet
 
+from posts.models import Group, Post, Comment
 from .permissions import IsAuthorOrReadOnly
 from .serializers import GroupSerializer, PostSerializer, CommentSerializer
-from posts.models import Group, Post, Comment
 
 
 # Create your views here.
